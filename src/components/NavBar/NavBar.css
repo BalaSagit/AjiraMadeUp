@@ -33,7 +33,7 @@
   padding-top: 0.35rem;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 800px) {
   .nav-items {
     display: none;
   }
@@ -69,7 +69,7 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 800px) {
   .toggle-button {
     display: none;
   }

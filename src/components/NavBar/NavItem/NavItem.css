@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 800px) {
   .navItem {
     border-bottom: 0.1rem solid lightgray;
   }

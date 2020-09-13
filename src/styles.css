@@ -1,4 +1,11 @@
-@media (max-width: 550px) {
+@media (max-width: 360px) {
+  html,
+  body {
+    font-size: 11px !important;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 550px) {
   html,
   body {
     font-size: 9px;
@@ -19,6 +26,39 @@
   }
 }
 
+/* @media (min-width: 751px) and (max-width: 768px) {
+  html,
+  body {
+    font-size: 15px !important;
+  }
+
+  .content-container {
+    margin: 0rem 2rem 0rem 2rem !important;
+  }
+
+  .toggle-button {
+    padding-right: 2rem !important;
+  }
+
+  .footerInfo {
+    padding: 3rem 0rem 2rem 5rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
+
+  .contactInfo {
+    margin: 1rem 3rem 2rem 2rem !important;
+    width: 20%;
+  }
+
+  .lni-header-open{
+    padding-right: 5rem !important;
+  }
+} */
+
 @media (min-width: 751px) and (max-width: 850px) {
   html,
   body {
@@ -29,7 +69,7 @@
 @media (min-width: 851px) and (max-width: 1000px) {
   html,
   body {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 }
 
@@ -98,3 +138,5 @@ body {
 p {
   margin: 0 !important;
 }
+
+

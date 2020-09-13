@@ -4,7 +4,7 @@
 }
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 800px) {
   .secNavItem{
     border-bottom: 0.1rem solid lightgray;
     padding-bottom: .75rem;

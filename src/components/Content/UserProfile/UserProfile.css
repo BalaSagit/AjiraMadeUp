@@ -1,6 +1,7 @@
 .user-profile {
   display: flex;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .user-profile-img {

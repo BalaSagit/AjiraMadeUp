@@ -18,7 +18,7 @@ export default class NavBar extends React.Component {
 
   handleResize = () => {
     this.setState({
-      toggle: window.innerWidth >= 768 ? false : this.state.toggle
+      toggle: window.innerWidth >= 800 ? false : this.state.toggle
     });
   };
 
