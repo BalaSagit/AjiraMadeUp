@@ -1,0 +1,55 @@
+.socialMedInfo {
+  width: 20rem;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #bbbbbb;
+  padding: 5rem 1rem 4rem 1rem;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 361px) {
+  .socialMedInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: auto;
+  }
+
+  .logo-container {
+    flex-direction: column;
+  }
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.stw-text {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sm-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.fb-icon {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.insta-icon {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.yt-icon {
+  font-size: 1.5rem;
+  padding: 1rem;
+}

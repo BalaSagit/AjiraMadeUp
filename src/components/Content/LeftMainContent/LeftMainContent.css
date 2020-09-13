@@ -1,0 +1,9 @@
+.left-main-content{
+  width: 30%;
+}
+
+@media screen and (max-width: 361px) {
+  .left-main-content{
+    width: 100%;
+  }
+}

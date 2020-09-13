@@ -1,0 +1,56 @@
+.contactInfo {
+  color: #bbbbbb;
+  font-weight: 300;
+  min-width: 15rem;
+  margin: 1rem 5rem 2rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 361px){
+  .contactInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+.address-infos {
+  margin: 0;
+  padding-top: 0rem;
+}
+
+.envelope-container {
+  box-sizing: border-box;
+  display: flex;
+  max-height: 2rem;
+  margin-top: 3rem;
+}
+
+.envelope-icon {
+  padding-top: 0.25rem;
+}
+
+.mail-value {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.phone-container {
+  box-sizing: border-box;
+  display: flex;
+  max-height: 2rem;
+}
+
+.phone-icon {
+  padding-top: 0.25rem;
+}
+
+.phone-value {
+  margin: 0;
+  padding-left: 1rem;
+}

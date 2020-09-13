@@ -1,0 +1,30 @@
+.user-profile {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.user-profile-img {
+  height: 4rem;
+}
+
+.user-ne-container {
+  box-sizing: border-box;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width:768px){
+  .user-ne-container{
+    display: none;
+  }
+}
+
+.user-name {
+  color: #333333;
+}
+
+.user-email {
+  color: #9b9b9b;
+}

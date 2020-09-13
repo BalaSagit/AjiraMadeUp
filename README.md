@@ -1,2 +1,2 @@
-# AjiraMadeUp
+# MadeUp
 Created with CodeSandbox

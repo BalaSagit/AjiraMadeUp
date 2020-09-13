@@ -1,0 +1,89 @@
+input {
+  height: 3rem;
+  margin: 1rem 1rem 1rem 0rem;
+  border: 1px solid #d1d1d1;
+  padding-left: 1.25rem;
+}
+
+.my-profile {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 361px) {
+  .my-profile {
+    padding: 2rem 0rem 2rem 0rem;
+  }
+
+  .my-profile-head {
+    display: none;
+  }
+
+  .name-input-container {
+    flex-direction: column;
+  }
+
+  .first-name-input {
+    width: 95% !important;
+  }
+  .last-name-input {
+    width: 95% !important;
+  }
+
+  input {
+    margin-right: 0rem;
+  }
+
+  .save-changes-btn {
+    width: 100%;
+  }
+}
+
+.my-profile-head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #777777;
+}
+
+.my-profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-input-container {
+  display: flex;
+}
+
+
+.first-name-input {
+  width: 87.5%;
+}
+.last-name-input {
+  width: 87.5%;
+}
+.my-profile-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.save-changes-btn {
+  background: #333333;
+  color: #ffffff;
+  border: 1px solid #333333;
+  font-family: Jost;
+  font-weight: 500;
+  box-sizing: border;
+  margin: 1rem;
+  margin-left: auto;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 2rem 0rem 2rem;
+}
+/* .email-input {
+}
+.phone-input {
+}
+.password-input {
+}
+.confirm-password-input {
+} */

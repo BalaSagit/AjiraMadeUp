@@ -1,0 +1,12 @@
+.secNavItem{
+  padding: 1rem 1rem 1rem 1rem;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 769px) {
+  .secNavItem{
+    border-bottom: 0.1rem solid lightgray;
+    padding-bottom: .75rem;
+  }
+}

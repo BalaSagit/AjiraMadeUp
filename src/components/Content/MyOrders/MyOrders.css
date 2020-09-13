@@ -1,0 +1,100 @@
+.my-orders {
+  padding: 2rem;
+  font-size: 0.85rem;
+}
+
+.my-orders-head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #777777;
+}
+
+.my-order-item {
+  display: flex;
+  box-sizing: border-box;
+
+  margin: 1rem 0rem 1rem 0rem;
+  border-bottom: .125rem solid #dddddd;
+}
+
+.order-img-container {
+  background: #dddddd;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+
+.order-img {
+  height: 5rem;
+}
+
+.order-name-container {
+  flex-grow: 1;
+  /* padding-left: 1.5rem; */
+  /* padding: .1rem 0rem .1rem 1.5rem; */
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+.order-item-id {
+  color: #777777;
+}
+.order-item-name {
+  font-weight: 600;
+  flex-grow: 1;
+  width: 55%;
+  padding-top: 0.5rem;
+}
+.order-item-deliver-at {
+  color: #777777;
+}
+
+.order-payment-container {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  text-align: right;
+  padding: 1.5rem 0rem 0rem 0rem;
+}
+.order-item-payment-type {
+  color: #777777;
+}
+.order-item-value {
+  font-weight: 600;
+  flex-grow: 1;
+}
+.order-item-status {
+  color: #777777;
+  background: #f3f3f3;
+  border-radius: 6px 6px 0px 0px;
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.order-item-status-pending {
+  color: #ffffff;
+  background: #333333;
+  padding: 0rem 1rem 0rem 1rem;
+
+  border-radius: 6px 6px 0px 0px;
+}
+
+
+@media screen and (max-width: 361px) {
+
+  .my-orders {
+    padding: 0rem;
+    /* font-size: 0.85rem; */
+  }
+
+  .my-orders-head{
+    display: none;
+  }
+
+  .order-item-name{
+    width: 75%;
+  }
+}
