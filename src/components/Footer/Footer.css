@@ -1,6 +1,6 @@
 .footer {
   color: white;
-  height: 22.5rem;
+  height: 25rem;
   background-color: #333333;
   width: 100%;
 
@@ -14,17 +14,39 @@
   font-size: 1.1rem;
 }
 
-@media screen and (max-width: 769px) {
+.footerInfo {
+  color: #bbbbbb;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 1.5rem 2rem 2rem 10rem;
+  min-width: 10rem;
+}
+
+.footer-infos {
+  margin: 0;
+  padding-top: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
   .footer {
     height: 30rem;
   }
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 400px) {
   .footer {
     flex-direction: column;
     height: 60rem;
     font-size: 1.5rem;
     padding: 5rem 0rem 5rem 0rem;
+  }
+
+  .footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
   }
 }
