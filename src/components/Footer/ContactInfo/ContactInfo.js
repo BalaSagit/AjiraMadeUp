@@ -11,7 +11,9 @@ export default class ContactInfo extends React.Component {
     return (
       <div className="contactInfo">
         {addressInfos.map((info) => (
-          <p key={info} className="address-infos">{info}</p>
+          <p key={info} className="address-infos">
+            {info}
+          </p>
         ))}
 
         <div className="envelope-container">

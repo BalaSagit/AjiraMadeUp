@@ -8,8 +8,8 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 361px){
-  .contactInfo{
+@media screen and (max-width: 400px) {
+  .contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;

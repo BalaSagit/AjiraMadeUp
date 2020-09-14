@@ -2,8 +2,9 @@ import React from "react";
 import "./UserProfile.css";
 
 import userProfile from "../../../assets/userProfile.png";
+import { connect } from "react-redux";
 
-export default class UserProfile extends React.Component {
+class UserProfile extends React.Component {
   render() {
     return (
       <div tabIndex="0" className="user-profile">
@@ -13,10 +14,20 @@ export default class UserProfile extends React.Component {
           alt="User profile"
         />
         <div className="user-ne-container">
-          <p className="user-name">Grishk</p>
-          <p className="user-email">griiskaim@gmail.com</p>
+          <p className="user-name">
+            {this.props.myProfile.firstName +
+              " " +
+              this.props.myProfile.lastName}
+          </p>
+          <p className="user-email">{this.props.myProfile.email}</p>
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  myProfile: state.myProfile.myProfile
+});
+
+export default connect(mapStateToProps)(UserProfile);

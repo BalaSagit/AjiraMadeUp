@@ -41,7 +41,6 @@
   cursor: pointer;
 }
 
-
 .shopping-icon {
   padding: 1rem 1rem 1rem 1rem;
   cursor: pointer;
@@ -113,7 +112,7 @@
   }
 
   .navItemActive {
-     border-bottom: 0.1rem solid lightgray;
+    border-bottom: 0.1rem solid lightgray;
   }
 }
 

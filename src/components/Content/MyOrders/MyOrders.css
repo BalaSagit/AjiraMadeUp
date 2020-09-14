@@ -14,7 +14,7 @@
   box-sizing: border-box;
 
   margin: 1rem 0rem 1rem 0rem;
-  border-bottom: .125rem solid #dddddd;
+  border-bottom: 0.125rem solid #dddddd;
 }
 
 .order-img-container {
@@ -33,10 +33,7 @@
 
 .order-name-container {
   flex-grow: 1;
-  /* padding-left: 1.5rem; */
-  /* padding: .1rem 0rem .1rem 1.5rem; */
   padding: 1.5rem 0rem 1.5rem 1.5rem;
-
   display: flex;
   flex-direction: column;
 }
@@ -82,19 +79,16 @@
   border-radius: 6px 6px 0px 0px;
 }
 
-
-@media screen and (max-width: 361px) {
-
+@media screen and (max-width: 400px) {
   .my-orders {
     padding: 0rem;
-    /* font-size: 0.85rem; */
   }
 
-  .my-orders-head{
+  .my-orders-head {
     display: none;
   }
 
-  .order-item-name{
+  .order-item-name {
     width: 75%;
   }
 }
