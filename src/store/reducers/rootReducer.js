@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import globalReducer from "./globalReducer";
+import toggleReducer from "./toggleReducer";
+import myProfileReducer from "./myProfileReducer";
 
 const reducers = {
-  global: globalReducer
+  toggle: toggleReducer,
+  myProfile: myProfileReducer
 };
 
 export default combineReducers({

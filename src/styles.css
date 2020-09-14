@@ -1,11 +1,11 @@
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   html,
   body {
     font-size: 11px !important;
   }
 }
 
-@media (min-width: 361px) and (max-width: 550px) {
+@media (min-width: 401px) and (max-width: 550px) {
   html,
   body {
     font-size: 9px;
@@ -25,39 +25,6 @@
     font-size: 11px;
   }
 }
-
-/* @media (min-width: 751px) and (max-width: 768px) {
-  html,
-  body {
-    font-size: 15px !important;
-  }
-
-  .content-container {
-    margin: 0rem 2rem 0rem 2rem !important;
-  }
-
-  .toggle-button {
-    padding-right: 2rem !important;
-  }
-
-  .footerInfo {
-    padding: 3rem 0rem 2rem 5rem !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-  }
-
-  .contactInfo {
-    margin: 1rem 3rem 2rem 2rem !important;
-    width: 20%;
-  }
-
-  .lni-header-open{
-    padding-right: 5rem !important;
-  }
-} */
 
 @media (min-width: 751px) and (max-width: 850px) {
   html,
@@ -83,42 +50,42 @@
 @media (min-width: 1151px) and (max-width: 1300px) {
   html,
   body {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
 @media (min-width: 1301px) and (max-width: 1450px) {
   html,
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1451px) and (max-width: 1600px) {
   html,
   body {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
 @media (min-width: 1601px) and (max-width: 1750px) {
   html,
   body {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1751px) and (max-width: 1900px) {
   html,
   body {
-    font-size: 19px;
+    font-size: 21px;
   }
 }
 
 @media (min-width: 1901px) {
   html,
   body {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -127,16 +94,16 @@ body {
   margin: 0 !important;
   font-family: "Jost", sans-serif !important;
   width: 100% !important;
+  height: 100% !important;
 }
 
 #root {
   width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
+  height: 100% !important;
 }
 
 p {
   margin: 0 !important;
 }
-
-
