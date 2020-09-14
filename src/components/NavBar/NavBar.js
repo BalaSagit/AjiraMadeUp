@@ -1,8 +1,6 @@
 import React from "react";
 import "./NavBar.css";
 import Logo from "../Logo/Logo";
-import NavItem from "./NavItem/NavItem";
-import SecondaryNavItem from "./SecondaryNavItem/SecondaryNavItem";
 import { navItems, secNavItems } from "../../appData/appData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -41,11 +39,18 @@ export default class NavBar extends React.Component {
 
         <div className={this.state.toggle ? "nav-items-active" : "nav-items"}>
           {navItems.map((item) => (
-            <NavItem
+            <div
               key={item.itemName}
-              itemName={item.itemName}
-              isActive={item.isActive}
-            />
+              tabIndex="0"
+              className={item.isActive ? "navItemActive" : "navItem"}
+            >
+              {item.itemName}
+            </div>
+            // <NavItem
+            //   key={item.itemName}
+            //   itemName={item.itemName}
+            //   isActive={item.isActive}
+            // />
           ))}
         </div>
 
@@ -55,13 +60,18 @@ export default class NavBar extends React.Component {
           }
         >
           {secNavItems.map((item) => (
-            <SecondaryNavItem key={item.itemName} itemSrc={item.itemSrc} />
+            <i key={item.itemName} tabIndex="0" className="secNavItem">
+              {" "}
+              {item.itemSrc}
+            </i>
           ))}
         </div>
 
-        {!this.state.toggle ? <div className="filler" /> : ""}
-
-        <div className="primary-nav-items">
+        <div
+          className={
+            this.state.toggle ? "primary-nav-items-active" : "primary-nav-items"
+          }
+        >
           <i tabIndex="0" className="shopping-icon">
             {" "}
             <FontAwesomeIcon icon={faShoppingCart} />
@@ -72,7 +82,12 @@ export default class NavBar extends React.Component {
           </i>
         </div>
 
-        <button className="toggle-button" onClick={this.Toggle}>
+        <button
+          className={
+            this.state.toggle ? "toggle-button-active" : "toggle-button"
+          }
+          onClick={this.Toggle}
+        >
           <i className="bar-icon">
             {" "}
             <FontAwesomeIcon icon={faBars} />
