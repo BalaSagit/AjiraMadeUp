@@ -1,9 +1,8 @@
 import React from "react";
 import "./Content.css";
 
-import TabPath from "./TabPath/TabPath";
+import { connect } from "react-redux";
 
-// import LeftMainContent from "./LeftMainContent/LeftMainContent";
 import UserProfile from "./UserProfile/UserProfile";
 import LeftNavItems from "./LeftNavItems/LeftNavItems";
 import RightMainContent from "./RightMainContent/RightMainContent";
@@ -30,7 +29,7 @@ class Content extends React.Component {
   render() {
     return (
       <main className="content-container">
-        {this.state.showPath ? <TabPath /> : <React.Fragment />}
+        {this.state.showPath ? <div className="current-tab-Path">{this.props.currentRoute}</div> : <React.Fragment />}
         <content className="main-content">
           <content className="left-main-content">
             <UserProfile />
@@ -43,4 +42,8 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = (state) => ({
+  currentRoute: state.toggle.currentRoute
+});
+
+export default connect(mapStateToProps)(Content);

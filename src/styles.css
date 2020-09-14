@@ -1,7 +1,7 @@
 @media (max-width: 400px) {
   html,
   body {
-    font-size: 11px !important;
+    font-size: 11px;
   }
 }
 
@@ -106,4 +106,12 @@ body {
 
 p {
   margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+i{
+  font-style: normal !important;
 }

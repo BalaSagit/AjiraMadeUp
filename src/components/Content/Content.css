@@ -6,6 +6,11 @@
   margin: 2rem 2.5rem 2rem 5rem;
 }
 
+.current-tab-Path {
+  color: #777777;
+}
+
+
 .main-content {
   display: flex;
   flex-direction: row;
@@ -18,7 +23,7 @@
   width: 30%;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .content-container {
     margin: 0rem 5rem 2rem 5rem;
   }
@@ -27,7 +32,13 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media (min-width:400px) and (max-width: 800px) {
+  .content-container {
+    margin: 0rem 2rem 2rem 5rem;
+  }
+}
+
+@media (max-width: 400px) {
   .content-container {
     height: 87rem;
     margin: 0.5rem 2rem 0.5rem 2rem;
