@@ -8,6 +8,12 @@
   flex-direction: column;
 }
 
+@media (min-width: 400px) and (max-width: 700px) {
+  .contactInfo {
+    margin-right: 1.25rem;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .contactInfo {
     display: flex;
