@@ -3,15 +3,17 @@ import "./LeftNavItem.css";
 
 import { connect } from "react-redux";
 
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronRight,
+  faChevronDown,
+  faChevronUp
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
-  // setProfileActive,
-  // setOrdersActive,
   toggleOrdersActive,
   toggleProfileActive
-} from "../../../store/actions/globalActions";
+} from "../../../store/actions/toggleActions";
 
 class LeftNavItem extends React.Component {
   handleClick = () => {
@@ -21,6 +23,22 @@ class LeftNavItem extends React.Component {
       this.props.toggleOrdersActive();
     }
   };
+
+  state = {
+    isMobileVersion: window.innerWidth <= 400 ? true : false
+  };
+
+  componentDidMount() {
+    window.addEventListener(
+      "resize",
+      () => {
+        this.setState({
+          isMobileVersion: window.innerWidth <= 400 ? true : false
+        });
+      },
+      false
+    );
+  }
 
   render() {
     return (
@@ -38,7 +56,15 @@ class LeftNavItem extends React.Component {
           <p className="lni-header-str"> {this.props.itemHeader} </p>{" "}
           <i className="lni-header-open">
             {" "}
-            <FontAwesomeIcon icon={faChevronRight} />
+            {this.state.isMobileVersion ? (
+              this.props.isActive ? (
+                <FontAwesomeIcon icon={faChevronUp} />
+              ) : (
+                <FontAwesomeIcon icon={faChevronDown} />
+              )
+            ) : (
+              <FontAwesomeIcon icon={faChevronRight} />
+            )}
           </i>
         </div>
         <p className="lni-content">{this.props.itemContent}</p>
