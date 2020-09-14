@@ -1,9 +1,9 @@
 // DEFAULT STATE WHEN THE APPLICATION STARTS
 const defaultState = {
   myProfile: {
-    firstName: "xxxxxxx",
-    lastName: "x",
-    email: "xxxxxxxx@gmail.com",
+    firstName: "Balaji",
+    lastName: "S",
+    email: "bala.sagit@gmail.com",
     phoneNumber: "",
     password: "",
     confirmPassword: ""

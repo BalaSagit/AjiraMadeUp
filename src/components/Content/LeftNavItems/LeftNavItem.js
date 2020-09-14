@@ -28,6 +28,18 @@ class LeftNavItem extends React.Component {
     isMobileVersion: window.innerWidth <= 400 ? true : false
   };
 
+  onMouseDown(e) {
+    if (e) {
+      e.preventDefault();
+    }
+  }
+
+  onKeyUp = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+      this.handleClick();
+    }
+  };
+
   componentDidMount() {
     window.addEventListener(
       "resize",
@@ -50,6 +62,8 @@ class LeftNavItem extends React.Component {
             : "left-nav-item"
         }
         onClick={this.handleClick}
+        onMouseDown={this.onMouseDown}
+        onKeyUp={this.onKeyUp}
       >
         <div className="lni-header">
           {" "}

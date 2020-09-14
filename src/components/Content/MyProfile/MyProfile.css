@@ -5,11 +5,17 @@ input {
   padding-left: 1.25rem;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .my-profile {
   padding: 2rem;
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 400px) {
   .my-profile {
     padding: 2rem 0rem 2rem 0rem;
   }
@@ -53,7 +59,6 @@ input {
   display: flex;
 }
 
-
 .first-name-input {
   width: 87.5%;
 }
@@ -80,11 +85,3 @@ input {
   padding: 0rem 2rem 0rem 2rem;
   cursor: pointer;
 }
-/* .email-input {
-}
-.phone-input {
-}
-.password-input {
-}
-.confirm-password-input {
-} */

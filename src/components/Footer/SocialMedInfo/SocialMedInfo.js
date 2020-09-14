@@ -11,21 +11,52 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class SocialMedInfo extends React.Component {
+  handleClick(e) {
+    if (e) {
+      e.preventDefault();
+    }
+  }
+
+  onKeyUp = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+      this.handleClick();
+    }
+  };
   render() {
     return (
       <div className="socialMedInfo">
-        <div className="logo-container">
+        <div
+          tabIndex="0"
+          className="logo-container"
+          onMouseDown={this.handleClick}
+          onKeyUp={this.onKeyUp}
+        >
           <Logo />
         </div>
         <p className="stw-text">Stay in touch with us</p>
         <div className="sm-icon-container">
-          <i className="fb-icon">
+          <i
+            tabIndex="0"
+            className="fb-icon"
+            onMouseDown={this.handleClick}
+            onKeyUp={this.onKeyUp}
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </i>
-          <i className="insta-icon">
+          <i
+            tabIndex="0"
+            className="insta-icon"
+            onMouseDown={this.handleClick}
+            onKeyUp={this.onKeyUp}
+          >
             <FontAwesomeIcon icon={faInstagram} />
           </i>
-          <i className="yt-icon">
+          <i
+            tabIndex="0"
+            className="yt-icon"
+            onMouseDown={this.handleClick}
+            onKeyUp={this.onKeyUp}
+          >
             <FontAwesomeIcon icon={faYoutube} />
           </i>
         </div>

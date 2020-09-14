@@ -5,9 +5,25 @@ import userProfile from "../../../assets/userProfile.png";
 import { connect } from "react-redux";
 
 class UserProfile extends React.Component {
+  onMouseDown(e) {
+    if (e) {
+      e.preventDefault();
+    }
+  }
+
+  onKeyUp = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+      this.handleClick();
+    }
+  };
   render() {
     return (
-      <div tabIndex="0" className="user-profile">
+      <div
+        tabIndex="0"
+        className="user-profile"
+        onMouseDown={this.onMouseDown}
+        onKeyUp={this.onKeyUp}
+      >
         <img
           className="user-profile-img"
           src={userProfile}

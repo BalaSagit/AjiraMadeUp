@@ -1,11 +1,7 @@
 import React from "react";
 import "./LeftNavItems.css";
-
 import LeftNavItem from "./LeftNavItem";
-
 import RightMainContent from "../RightMainContent/RightMainContent";
-import {} from "../../../store/actions/globalActions";
-
 import { connect } from "react-redux";
 
 class LeftNavItems extends React.Component {
@@ -17,15 +13,9 @@ class LeftNavItems extends React.Component {
     window.addEventListener(
       "resize",
       () => {
-        if (window.innerWidth <= 360) {
-          this.setState({
-            showRMC: true
-          });
-        } else {
-          this.setState({
-            showRMC: false
-          });
-        }
+        this.setState({
+          showRMC: window.innerWidth <= 400 ? true : false
+        });
       },
       false
     );
@@ -33,7 +23,7 @@ class LeftNavItems extends React.Component {
 
   render() {
     return (
-      <div className="left-nav-items-container">
+      <nav className="left-nav-items-container">
         <LeftNavItem
           key="MP"
           itemHeader="My Profile"
@@ -43,7 +33,7 @@ class LeftNavItems extends React.Component {
         {this.state.showRMC && this.props.isProfileActive ? (
           <RightMainContent />
         ) : (
-          <></>
+          <React.Fragment />
         )}
         <LeftNavItem
           key="MO"
@@ -54,7 +44,7 @@ class LeftNavItems extends React.Component {
         {this.state.showRMC && this.props.isOrdersActive ? (
           <RightMainContent />
         ) : (
-          <></>
+          <React.Fragment />
         )}
         <LeftNavItem
           key="SA"
@@ -62,14 +52,14 @@ class LeftNavItems extends React.Component {
           itemContent="3 addresses"
           isActive={false}
         />
-      </div>
+      </nav>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  isProfileActive: state.global.isProfileActive,
-  isOrdersActive: state.global.isOrdersActive
+  isProfileActive: state.toggle.isProfileActive,
+  isOrdersActive: state.toggle.isOrdersActive
 });
 
 export default connect(mapStateToProps)(LeftNavItems);

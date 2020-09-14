@@ -12,28 +12,32 @@ export default (state = defaultState, action) => {
   switch (action.type) {
     // TOGGLES THE IsProfileActive FLAG
     case "TOGGLE_PROFILE_ACTIVE":
-      updatedState.isProfileActive = !updatedState.isProfileActive;
+      // updatedState.isProfileActive = !updatedState.isProfileActive;
 
-      if (updatedState.isProfileActive) {
-        updatedState.currentRoute = "Home / My Profile";
+      if (!updatedState.isProfileActive) {
+        updatedState.isProfileActive = true;
         updatedState.isOrdersActive = false;
+        updatedState.currentRoute = "Home / My Profile";
       }
 
-      if (!updatedState.isOrdersActive && !updatedState.isProfileActive) {
-        updatedState.currentRoute = "Home";
-      }
+      // if (!updatedState.isOrdersActive && !updatedState.isProfileActive) {
+      //   updatedState.currentRoute = "Home";
+      // }
+
       break;
 
     // TOGGLES THE isOrdersActive FLAG
     case "TOGGLE_ORDERS_ACTIVE":
-      updatedState.isOrdersActive = !updatedState.isOrdersActive;
-      if (updatedState.isOrdersActive) {
+      // updatedState.isOrdersActive = !updatedState.isOrdersActive;
+
+      if (!updatedState.isOrdersActive) {
+        updatedState.isOrdersActive = true;
         updatedState.isProfileActive = false;
         updatedState.currentRoute = "Home / My Orders";
       }
-      if (!updatedState.isOrdersActive && !updatedState.isProfileActive) {
-        updatedState.currentRoute = "Home";
-      }
+      // if (!updatedState.isOrdersActive && !updatedState.isProfileActive) {
+      //   updatedState.currentRoute = "Home";
+      // }
       break;
 
     // RETURNING THE SAME-STATE AS DEFAULT

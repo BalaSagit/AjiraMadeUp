@@ -7,6 +7,10 @@
   flex-direction: row;
 }
 
+.navBar a {
+  color: #444444;
+}
+
 .primary-nav-items {
   display: flex;
   flex-direction: row;

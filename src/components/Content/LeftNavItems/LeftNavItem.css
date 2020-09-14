@@ -28,7 +28,7 @@
   font-size: 0.75rem;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .lni-header-open {
     padding-right: 0;
   }

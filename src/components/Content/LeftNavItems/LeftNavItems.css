@@ -2,7 +2,7 @@
   padding-left: 0.5rem;
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 400px) {
   .left-nav-items-container {
     height: auto;
   }

@@ -32,67 +32,112 @@ export default class NavBar extends React.Component {
     this.setState({ toggle: !this.state.toggle });
   };
 
+  handleClick(e) {
+    if (e) {
+      e.preventDefault();
+    }
+  }
+
+  onKeyUp = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+      this.handleClick();
+    }
+  };
+
+  getNavItems = () => {
+    return (
+      <nav className={this.state.toggle ? "nav-items-active" : "nav-items"}>
+        {navItems.map((item) => (
+          <div
+            key={item.itemName}
+            tabIndex="0"
+            className={item.isActive ? "navItemActive" : "navItem"}
+            onMouseDown={this.handleClick}
+            onKeyUp={this.onKeyUp}
+          >
+            {item.itemName}
+          </div>
+        ))}
+      </nav>
+    );
+  };
+
+  getSecNavItems = () => {
+    return (
+      <nav
+        className={this.state.toggle ? "sec-nav-items-active" : "sec-nav-items"}
+      >
+        {secNavItems.map((item) => (
+          <i
+            key={item.itemName}
+            tabIndex="0"
+            className="secNavItem"
+            onMouseDown={this.handleClick}
+            onKeyUp={this.onKeyUp}
+          >
+            {" "}
+            {item.itemSrc}
+          </i>
+        ))}
+      </nav>
+    );
+  };
+
+  getPrimaryNavItems = () => {
+    return (
+      <nav
+        className={
+          this.state.toggle ? "primary-nav-items-active" : "primary-nav-items"
+        }
+      >
+        <i
+          tabIndex="0"
+          className="shopping-icon"
+          onMouseDown={this.handleClick}
+          onKeyUp={this.onKeyUp}
+        >
+          {" "}
+          <FontAwesomeIcon icon={faShoppingCart} />
+        </i>
+        <i
+          tabIndex="0"
+          className="search-icon"
+          onMouseDown={this.handleClick}
+          onKeyUp={this.onKeyUp}
+        >
+          {" "}
+          <FontAwesomeIcon icon={faSearch} />
+        </i>
+      </nav>
+    );
+  };
+
+  getToggleButton = () => {
+    return (
+      <button
+        className={this.state.toggle ? "toggle-button-active" : "toggle-button"}
+        onClick={this.Toggle}
+      >
+        <i className="bar-icon">
+          {" "}
+          <FontAwesomeIcon icon={faBars} />
+        </i>
+      </button>
+    );
+  };
+
   render() {
     return (
       <header className="navBar">
-        <Logo className="nav-logo" />
+        <Logo />
 
-        <div className={this.state.toggle ? "nav-items-active" : "nav-items"}>
-          {navItems.map((item) => (
-            <div
-              key={item.itemName}
-              tabIndex="0"
-              className={item.isActive ? "navItemActive" : "navItem"}
-            >
-              {item.itemName}
-            </div>
-            // <NavItem
-            //   key={item.itemName}
-            //   itemName={item.itemName}
-            //   isActive={item.isActive}
-            // />
-          ))}
-        </div>
+        {this.getNavItems()}
 
-        <div
-          className={
-            this.state.toggle ? "sec-nav-items-active" : "sec-nav-items"
-          }
-        >
-          {secNavItems.map((item) => (
-            <i key={item.itemName} tabIndex="0" className="secNavItem">
-              {" "}
-              {item.itemSrc}
-            </i>
-          ))}
-        </div>
+        {this.getSecNavItems()}
 
-        <div
-          className={
-            this.state.toggle ? "primary-nav-items-active" : "primary-nav-items"
-          }
-        >
-          <i tabIndex="0" className="shopping-icon">
-            {" "}
-            <FontAwesomeIcon icon={faShoppingCart} />
-          </i>
-          <i tabIndex="0" className="search-icon">
-            {" "}
-            <FontAwesomeIcon icon={faSearch} />
-          </i>
-        </div>
+        {this.getPrimaryNavItems()}
 
-        <button
-          className={
-            this.state.toggle ? "toggle-button-active" : "toggle-button"
-          }
-          onClick={this.Toggle}
-        >
-          <i className="bar-icon">
-            {" "}
-            <FontAwesomeIcon icon={faBars} />
-          </i>
-        </button>
+        {this.getToggleButton()}
       </header>
     );
   }

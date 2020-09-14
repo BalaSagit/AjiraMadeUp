@@ -7,7 +7,7 @@
   flex-grow: 1;
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 400px) {
   .socialMedInfo {
     display: flex;
     flex-direction: column;
