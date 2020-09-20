@@ -8,8 +8,14 @@ import {
   faShoppingCart,
   faBars
 } from "@fortawesome/free-solid-svg-icons";
+import { connect } from "react-redux";
+import { setHomePageActive } from "../../store/actions/pageToggleActions";
+import {
+  toggleProfileActive,
+  toggleOrdersActive
+} from "../../store/actions/toggleActions";
 
-export default class NavBar extends React.Component {
+class NavBar extends React.Component {
   state = {
     toggle: false
   };
@@ -18,6 +24,16 @@ export default class NavBar extends React.Component {
     this.setState({
       toggle: window.innerWidth >= 800 ? false : this.state.toggle
     });
+  };
+
+  handleSecNavItemClick = (e, itemName) => {
+    if (e) {
+      e.preventDefault();
+    }
+    if (itemName === "profile") {
+      this.props.toggleProfileActive();
+      this.props.setHomePageActive(false);
+    }
   };
 
   componentDidMount() {
@@ -74,6 +90,9 @@ export default class NavBar extends React.Component {
             className="secNavItem"
             onMouseDown={this.handleClick}
             onKeyUp={this.onKeyUp}
+            onClick={(e) => {
+              this.handleSecNavItemClick(e, item.itemName);
+            }}
           >
             {" "}
             {item.itemSrc}
@@ -142,3 +161,11 @@ export default class NavBar extends React.Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  setHomePageActive: (data) => dispatch(setHomePageActive(data)),
+  toggleProfileActive: () => dispatch(toggleProfileActive()),
+  toggleOrdersActive: () => dispatch(toggleOrdersActive())
+});
+
+export default connect(null, mapDispatchToProps)(NavBar);

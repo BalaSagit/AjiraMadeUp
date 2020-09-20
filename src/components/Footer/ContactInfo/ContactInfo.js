@@ -6,7 +6,9 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default class ContactInfo extends React.Component {
+import { connect } from "react-redux";
+
+class ContactInfo extends React.Component {
   handleClick(e) {
     if (e) {
       e.preventDefault();
@@ -20,7 +22,11 @@ export default class ContactInfo extends React.Component {
   };
   render() {
     return (
-      <div className="contactInfo">
+      <div
+        className={
+          this.props.isHomePageActive ? "contactInfo cih-active" : "contactInfo"
+        }
+      >
         {addressInfos.map((info) => (
           <p
             key={info}
@@ -55,3 +61,9 @@ export default class ContactInfo extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  isHomePageActive: state.pageToggle.isHomePageActive
+});
+
+export default connect(mapStateToProps)(ContactInfo);

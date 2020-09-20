@@ -9,8 +9,9 @@ import {
   faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { connect } from "react-redux";
 
-export default class SocialMedInfo extends React.Component {
+class SocialMedInfo extends React.Component {
   handleClick(e) {
     if (e) {
       e.preventDefault();
@@ -24,10 +25,20 @@ export default class SocialMedInfo extends React.Component {
   };
   render() {
     return (
-      <div className="socialMedInfo">
+      <div
+        className={
+          this.props.isHomePageActive
+            ? "socialMedInfo smi-active"
+            : "socialMedInfo"
+        }
+      >
         <div
           tabIndex="0"
-          className="logo-container"
+          className={
+            this.props.isHomePageActive
+              ? "logo-container lc-active"
+              : "logo-container"
+          }
           onMouseDown={this.handleClick}
           onKeyUp={this.onKeyUp}
         >
@@ -64,3 +75,9 @@ export default class SocialMedInfo extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  isHomePageActive: state.pageToggle.isHomePageActive
+});
+
+export default connect(mapStateToProps)(SocialMedInfo);

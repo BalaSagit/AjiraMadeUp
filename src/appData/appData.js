@@ -2,6 +2,44 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 
+export const topMenuItems = [
+  {
+    itemName: "For Me",
+    isActive: true,
+    bgColor: "#e6e7e7"
+  },
+  {
+    itemName: "Jeans",
+    isActive: false,
+    bgColor: "#e8f7fd"
+  },
+  {
+    itemName: "T-Shirts",
+    isActive: false,
+    bgColor: "#ffe3e3"
+  },
+  {
+    itemName: "Shirts",
+    isActive: false,
+    bgColor: "#eae8fd"
+  },
+  {
+    itemName: "Trousers",
+    isActive: false,
+    bgColor: "#fafae0"
+  },
+  {
+    itemName: "Joggers",
+    isActive: false,
+    bgColor: "#e6e7e7"
+  },
+  {
+    itemName: "Shorts",
+    isActive: false,
+    bgColor: "#e8f7fd"
+  }
+];
+
 export const footerInfos = [
   "About Us",
   "Deliver Information",

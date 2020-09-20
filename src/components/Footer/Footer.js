@@ -1,12 +1,11 @@
 import React from "react";
 import "./Footer.css";
-
 import { footerInfos } from "../../appData/appData";
-
 import ContactInfo from "./ContactInfo/ContactInfo";
 import SocialMedInfo from "./SocialMedInfo/SocialMedInfo";
+import {connect} from 'react-redux';
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
   handleClick(e) {
     if (e) {
       e.preventDefault();
@@ -21,8 +20,8 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="footer">
-        <div className="footerInfo">
+      <footer className={this.props.isHomePageActive ? "footer fh-active": "footer"}>
+        <div className={this.props.isHomePageActive ? "footerInfo fi-active": "footerInfo"}>
           {footerInfos.map((info) => (
             <p
               tabIndex="0"
@@ -41,3 +40,9 @@ export default class Footer extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  isHomePageActive: state.pageToggle.isHomePageActive
+});
+
+export default connect(mapStateToProps)(Footer);
