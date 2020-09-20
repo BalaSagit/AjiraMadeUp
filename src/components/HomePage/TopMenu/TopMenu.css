@@ -1,0 +1,51 @@
+@media screen and (min-width: 801px) {
+  .top-menu-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tm-item-circle {
+    height: 3rem !important;
+    width: 3rem !important;
+  }
+
+  .top-menu-container {
+    margin: 1rem 1rem 1rem 1rem !important;
+  }
+}
+
+.top-menu-container {
+  margin: 1rem 4rem 1rem 4rem;
+}
+
+.tm-item {
+  padding: 0rem 2rem 0rem 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.active-tm-item {
+  border: 0.1rem solid red;
+}
+
+.tm-item-circle {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.tm-item-name {
+  color: #777777;
+}
+
+.arrow-prev, .arrow-next{
+  color: lightgray;
+  font-size: 2rem;
+  font-weight: 200;
+}

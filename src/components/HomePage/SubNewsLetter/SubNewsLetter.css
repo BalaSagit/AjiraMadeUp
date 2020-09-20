@@ -1,0 +1,97 @@
+.snl-container {
+  height: 22.5rem;
+  background: #999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.gts-text {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+}
+
+.stonl-text {
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding-top: 1rem;
+}
+
+.subscribe-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.sub-email-input {
+  width: 25rem;
+  margin: 0;
+  border: 0;
+}
+
+.subscribe-button {
+  background-color: #e10000;
+  color: #ffffff;
+  border: 0;
+  height: 3rem;
+  width: 8rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 400px) {
+  .gts-text {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .snl-container {
+    height: 35rem;
+  }
+
+  .subscribe-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe-button {
+    width: 26.5rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+.locate-us-container {
+  background: #999999;
+  height: 2rem;
+  display: flex;
+  padding-left: 70%;
+}
+
+.locate-us {
+  font-size: 1.2rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222222;
+  width: 10rem;
+  height: 2rem;
+  box-shadow: 6px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 6px 6px 0px 0px;
+}
+
+.locate-us-text {
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 800px) {
+  .locate-us-container {
+    justify-content: center;
+    padding: 0;
+  }
+}

@@ -1,0 +1,65 @@
+hr {
+  margin: 0;
+  flex-grow: 1;
+  color: #dddddd;
+  background-color: #dddddd;
+  height: 1px;
+}
+
+.lastest-collections-container {
+  /* height: 32.5rem; */
+  margin: 3rem 3rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.lc-text-container {
+  display: flex;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 1.2rem !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.lc-text {
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.lc-list {
+  flex-grow: 1;
+  display: flex;
+  overflow: auto;
+  margin: 2rem 1rem 0rem 1rem;
+}
+
+.lc-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+}
+
+.lc-item-img {
+  width: 13.5rem;
+  height: 20rem;
+  padding-bottom: 1rem;
+}
+
+.ppts-text {
+  color: #333333;
+}
+
+.ppts-price {
+  color: red;
+}
+
+@media (max-width:800px){
+  .lastest-collections-container {
+    margin: 3rem 3rem 5rem 3rem;
+  }
+  .lc-item-img {
+    width: 17.5rem;
+    height: 25rem;
+    padding-bottom: 2rem;
+  }
+}
