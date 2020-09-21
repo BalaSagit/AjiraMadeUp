@@ -2,7 +2,6 @@ import React from "react";
 import "./Testimonials.css";
 
 export default class Testimonials extends React.Component {
-
   render() {
     let numberOfTestimonials = 7;
     let numberOfStars = 5;

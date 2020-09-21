@@ -13,7 +13,7 @@ export default class CollectionQuotes extends React.Component {
             so is our &nbsp;<p>collection</p>
           </div>
         </div>
-        <div className='right-quote-container'>
+        <div className="right-quote-container">
           <div className="wfs-quote">
             <p>Wrinkle-free</p> &nbsp; t-shirts
           </div>

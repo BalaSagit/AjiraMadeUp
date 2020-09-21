@@ -1,3 +1,7 @@
+h1 {
+  margin: 0;
+}
+
 .my-orders {
   padding: 2rem;
   font-size: 0.85rem;
@@ -69,6 +73,7 @@
   background: #f3f3f3;
   border-radius: 6px 6px 0px 0px;
   padding: 0rem 1rem 0rem 1rem;
+  cursor: pointer;
 }
 
 .order-item-status-pending {
@@ -77,6 +82,7 @@
   padding: 0rem 1rem 0rem 1rem;
 
   border-radius: 6px 6px 0px 0px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 400px) {
@@ -91,4 +97,33 @@
   .order-item-name {
     width: 75%;
   }
+}
+
+/* NEW FUNCTIONALITY */
+.mo-header {
+  display: flex;
+  height: 3rem;
+  justify-items: center;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.pending-orders-text {
+  width: 50%;
+  text-align: center;
+  border-bottom: 2px solid lightgrey;
+  color: gray;
+}
+
+.past-orders-text {
+  width: 50%;
+  text-align: center;
+  border-bottom: 2px solid lightgrey;
+  color: gray;
+}
+
+.pot-active,
+.pstot-active {
+  border-bottom: 2px solid gray !important;
+  color: black;
 }

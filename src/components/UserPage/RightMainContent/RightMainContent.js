@@ -1,11 +1,8 @@
 import React from "react";
 import "./RightMainContent.css";
-
 import MyProfile from "../MyProfile/MyProfile";
 import MyOrders from "../MyOrders/MyOrders";
-
 import Logo from "../../Logo/Logo";
-
 import { connect } from "react-redux";
 
 class RightMainContent extends React.Component {

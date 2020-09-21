@@ -6,7 +6,7 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 export default class SubNewsLetter extends React.Component {
   render() {
     return (
-      <div style={{background: "#999999"}}>
+      <div style={{ background: "#999999" }}>
         <div className="snl-container">
           <div className="gts-text">
             GET COUPONS &nbsp; <p>& STYLE GUIDES</p>

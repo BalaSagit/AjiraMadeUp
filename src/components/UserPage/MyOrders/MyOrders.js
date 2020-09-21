@@ -1,45 +1,44 @@
 import React from "react";
 import "./MyOrders.css";
 
-import { myOrderList } from "../../../appData/appData";
-import orderImg from "../../../assets/orderImg.png";
+import {
+  // myOrderList,
+  myPendingOrders,
+  myPastOrders
+} from "../../../appData/appData";
 
-function MyOrder(props) {
-  return (
-    <div className="my-order-item">
-      <div className="order-img-container">
-        <img className="order-img" src={orderImg} alt="OrderImg" />
-      </div>
-      <div className="order-name-container">
-        <p className="order-item-id">Order #{props.item.orderId}</p>
-        <p className="order-item-name">{props.item.itemName}</p>
-        <p className="order-item-deliver-at">{props.item.deliverAt}</p>
-      </div>
-      <div className="order-payment-container">
-        <p className="order-item-payment-type">{props.item.typeOfPayment}</p>
-        <p className="order-item-value">{props.item.itemValue}</p>
-        <p>
-          <span
-            className={
-              props.item.itemStatus === "Pending"
-                ? "order-item-status-pending"
-                : "order-item-status"
-            }
-          >
-            {props.item.itemStatus}
-          </span>
-        </p>
-      </div>
-    </div>
-  );
-}
+import MyOrder from '../MyOrder/MyOrder';
 
 class MyOrders extends React.Component {
+  state = {
+    isPastOrders: false,
+    orderList: myPastOrders
+  };
+
+
+  onPendingClick = () => {
+    this.setState({
+      isPastOrders: false,
+      orderList: myPendingOrders
+    })
+  }
+
+  onPastClick = () => {
+    this.setState({
+      isPastOrders: true,
+      orderList: myPastOrders
+    })
+  }
+
   render() {
     return (
       <div className="my-orders">
-        <p className="my-orders-head">My Orders</p>
-        {myOrderList.map((x) => (
+        <header className="mo-header">
+          <h1 className={this.state.isPastOrders ? "pending-orders-text" : "pending-orders-text pot-active"} onClick={this.onPendingClick}> Pending Orders</h1>
+          <h1 className={!this.state.isPastOrders ? "past-orders-text" : "past-orders-text pstot-active"} onClick={this.onPastClick}> Past Orders</h1>
+        </header>
+        {/* <p className="my-orders-head">My Orders</p> */}
+        {this.state.orderList.map((x) => (
           <MyOrder key={x.orderItemKey} item={x} />
         ))}
       </div>

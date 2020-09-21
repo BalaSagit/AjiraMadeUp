@@ -134,3 +134,105 @@ export const myOrderList = [
     itemStatus: "Delivered"
   }
 ];
+
+export const myPendingOrders = [
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_11",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sat, Aug 30",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 1,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  },
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_12",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sun, Aug 31",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 2,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  },
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_13",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sun, Aug 16",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 3,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  },
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_14",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sat, Aug 15",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 4,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  }
+];
+
+export const myPastOrders = [
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_21",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sat, Aug 30",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 4,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  },
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_22",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sun, Aug 31",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 3,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  },
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_23",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sun, Aug 16",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 2,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  },
+  {
+    orderId: "12345678",
+    orderItemKey: "12345678_24",
+    itemName: "Madeup White Cotton Blend Checkered Slim Fit Shirt",
+    deliverAt: "Express Delivery by Sat, Aug 15",
+    typeOfPayment: "Credit Card Payment",
+    itemValue: "Rs 1,899",
+    itemStatus: 1,
+    orderReceivedDate: "June 1, 2020 5:50 PM",
+    orderDipatchedDate: "June 3, 2020 6:00 AM",
+    orderReachedDate: "June 15, 2020 7:45 PM"
+  }
+];

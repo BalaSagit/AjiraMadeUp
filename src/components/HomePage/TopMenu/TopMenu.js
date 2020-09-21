@@ -27,16 +27,12 @@ export const Menu = (list) =>
     );
   });
 
-// const Arrow = ({ text, className }) => {
-//   return <div className={className}>{text}</div>;
-// };
-
 const ArrowLeft = (
   <FontAwesomeIcon className="arrow-prev" icon={faChevronLeft} />
-); // Arrow({ text: "<", className: "arrow-prev" });
+);
 const ArrowRight = (
   <FontAwesomeIcon className="arrow-next" icon={faChevronRight} />
-); // Arrow({ text: ">", className: "arrow-next" });
+);
 
 export default class TopMenu extends React.Component {
   render() {
