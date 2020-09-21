@@ -6,7 +6,9 @@ export default class OrderStatus extends React.Component {
     return (
       <div className="os-item">
         <div className="prog-st-container">
-          <div className={isActive ? "prog-st-active" : "prog-st"} />
+          <div className={isActive ? "prog-st-active" : "prog-st"}>
+            {isActive ? "✔" : ""}
+          </div>
           {showConnector ? (
             <div className="prog-st-connect"></div>
           ) : (

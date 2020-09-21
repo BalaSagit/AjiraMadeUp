@@ -23,6 +23,9 @@ h4 {
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
+  font-size: .7rem;
+  color: white;
+  text-align: center;
 }
 
 .prog-st {
